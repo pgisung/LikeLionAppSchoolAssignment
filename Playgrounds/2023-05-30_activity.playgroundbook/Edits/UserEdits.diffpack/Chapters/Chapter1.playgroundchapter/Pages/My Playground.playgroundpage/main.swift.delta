@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>//////////////// 1...4
+let nameOfMembers = [ "Sumin", "Jisung", "Chaeyoung", "Byunggu", "Ara" ]
+
+var memberIndex: Int = 0
+for member in nameOfMembers {
+    switch memberIndex {
+    case 0...1:
+        print("Nice to meet you \(member)")
+    case 2:
+        print("Long time no see \(member)") 
+    case 3..&lt;5:
+        print("Welcome \(member)")
+    default:
+        break 
+    }
+    
+    memberIndex += 1
+}
+
+//////////////// 5...6
+var sum: Int = 0
+for iLoopCount in 1...100 {
+    sum += iLoopCount
+    
+    if iLoopCount % 5 == 0 {
+        print("iLoopCount: \(iLoopCount), sum: \(sum)")
+    }
+}
+
+//////////////// 7
+var isF: Bool = false
+var temperature: Int = 26
+var temperatureInFloat: Float
+
+if !isF {
+    temperatureInFloat = ( Float(temperature) * 1.8 ) + 32.0
+    temperature = Int(temperatureInFloat)
+}
+
+switch temperature {
+case 0...49 where temperature % 2 == 0:
+    print("Cold and even")
+    fallthrough
+case 50...79 where temperature % 2 == 0:
+    print("Warm and even")
+    fallthrough
+case 80...110 where temperature % 2 == 0:
+    print("Hot and even")
+    fallthrough
+default:
+    break 
+}
+
+//////////////// 8
+for firstNum in 1 ... 9 {
+    guard firstNum % 2 == 0 else {
+        continue
+    }
+    for secNum in 1 ... 9 {
+        print("\(firstNum) * \(secNum) = \(firstNum * secNum)")
+    }
+}
+
+//////////////// 9
+var strStars: String = ""
+for _ in 0...1{
+    for iLoopCount in 0...4{
+        strStars = ""
+        for jLoopCount in 0...iLoopCount {
+            strStars += "*"
+        }
+        print("\(strStars)")
+    }
+    for iLoopCount in (0...4).reversed(){
+        strStars = ""
+        for jLoopCount in 0...iLoopCount {
+            strStars += "*"
+        }
+        print("\(strStars)")
+    }
+}
+
+//////////////// 10
+var strResult: String
+var rangeNum = [12, 8, 10, 5, 7, 4]
+
+for iLoopCount in 1...rangeNum.count {
+    strResult = "\(iLoopCount) "
+    for jLoopCount in 1...rangeNum[ iLoopCount - 1 ] {
+        strResult += "="
+    }
+    strResult += " \(rangeNum[ iLoopCount - 1 ])"
+    print("\(strResult)")
+}
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 2036}</string>
+			<key>OriginalContent</key>
+			<string>
+</string>
+			<key>OriginalRange</key>
+			<string>{0, 1}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>

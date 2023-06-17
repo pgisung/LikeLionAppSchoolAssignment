@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// ------------------------------ 1
+//let OurTeamArray: [String] = [ "송도희", "임하니", "윤경환", "박지성", "원강묵", "박성훈" ]
+//
+//for strMember in OurTeamArray {
+//    print(strMember)
+//}
+// ------------------------------ 2
+//let OurTeamArray: [String] = [ "송도희", "임하니", "윤경환", "박지성", "원강묵", "박성훈" ]
+//let AnotherTeamArray: [String] = [ "안효명", "방유빈", "박재형", "안지영", "김성준" ]
+//let CombinedTeamArray: [String] = OurTeamArray + AnotherTeamArray
+//
+//for strMember in CombinedTeamArray {
+//    print(strMember)
+//}
+// ------------------------------ 3
+//let OurTeamDict: [String: String] = [
+//    "송도희": "Taeyeon",
+//    "임하니": "Maroon5",
+//    "윤경환": "BIBI",
+//    "박지성": "Charlie Puth",
+//    "원강묵": "YE",
+//    "박성훈": "IU"
+//]
+//
+//for (strMember, strArtist) in OurTeamDict {
+//        print("\(strMember) into \(strArtist)")
+//}
+//// ------------------------------ 4-1
+//let OurTeamDict: [String: String] = [
+//    "송도희": "Taeyeon",
+//    "임하니": "Maroon5",
+//    "윤경환": "BIBI",
+//    "박지성": "Charlie Puth",
+//    "원강묵": "YE",
+//    "박성훈": "IU"
+//]
+//let AnotherTeamDict: [String: String] = [
+//    "안효명": "Imagine Dragons",
+//    "방유빈": "AESPA",
+//    "박재형": "New Jeans",
+//    "안지영": "IVE",
+//    "김성준": "LESSERAFIM"
+//]
+////let KeepingCombinedTeamDict: [String: String] = OurTeamDict.merging(AnotherTeamDict) {
+////    (current, _) in current
+////}
+//let KeepingCombinedTeamDict: [String: String] = OurTeamDict.merging(AnotherTeamDict, uniquingKeysWith: { (strCurrent, strNew) -&gt; String in
+//    return strCurrent
+//} )
+////let ReplacingCombinedTeamDict: [String: String] = OurTeamDict.merging(AnotherTeamDict) {
+////    (_, new) in new
+////}
+//let ReplacingCombinedTeamDict: [String: String] = OurTeamDict.merging(AnotherTeamDict, uniquingKeysWith: { (strCurrent, strNew) -&gt; String in
+//    return strNew
+//} )
+//
+//for (strMember, strArtist) in ReplacingCombinedTeamDict {
+//    print("\(strMember) into \(strArtist)")
+//}
+// ------------------------------ 4-2
+//let OurTeamDict: [[String: String]] = [
+//    ["송도희": "Taeyeon"],
+//    ["임하니": "Maroon5"],
+//    ["윤경환": "BIBI"],
+//    ["박지성": "Charlie Puth"],
+//    ["원강묵": "YE"],
+//    ["박성훈": "IU"]
+//]
+//let AnotherTeamDict: [[String: String]] = [
+//    ["안효명": "Imagine Dragons"],
+//    ["방유빈": "AESPA"],
+//    ["박재형": "New Jeans"],
+//    ["안지영": "IVE"],
+//    ["김성준": "LESSERAFIM"]
+//]
+//let CombinedTeamDict: [[String: String]] = OurTeamDict + AnotherTeamDict
+//
+//for eachDict in CombinedTeamDict {
+//    for (strMember, strArtist) in eachDict {
+//        print("\(strMember) into \(strArtist)")
+//    }
+//}
+// ------------------------------ 5-1
+//let OurTeamDict: [String: String] = [
+//    "송도희": "Taeyeon",
+//    "임하니": "Maroon5",
+//    "윤경환": "BIBI",
+//    "박지성": "Charlie Puth",
+//    "원강묵": "YE",
+//    "박성훈": "IU"
+//]
+//let AnotherTeamDict: [String: String] = [
+//    "안효명": "Imagine Dragons",
+//    "방유빈": "AESPA",
+//    "박재형": "New Jeans",
+//    "안지영": "IVE",
+//    "김성준": "LESSERAFIM"
+//]
+////let KeepingCombinedTeamDict: [String: String] = OurTeamDict.merging(AnotherTeamDict) {
+////    (current, _) in current
+////}
+//let KeepingCombinedTeamDict: [String: String] = OurTeamDict.merging(AnotherTeamDict, uniquingKeysWith: { (strCurrent, strNew) -&gt; String in
+//    return strCurrent
+//} )
+////let ReplacingCombinedTeamDict: [String: String] = OurTeamDict.merging(AnotherTeamDict) {
+////    (_, new) in new
+////}
+//let ReplacingCombinedTeamDict: [String: String] = OurTeamDict.merging(AnotherTeamDict, uniquingKeysWith: { (strCurrent, strNew) -&gt; String in
+//    return strNew
+//} )
+//let IndexedCombinedTeamDict = Dictionary(uniqueKeysWithValues: zip(1..., ReplacingCombinedTeamDict.values))
+//
+//for (strMember, strArtist) in IndexedCombinedTeamDict {
+//    print("\(strMember) into \(strArtist)")
+//}
+// ------------------------------ 5-2
+//let OurTeamDict: [String: String] = [
+//    "송도희": "Taeyeon",
+//    "임하니": "Maroon5",
+//    "윤경환": "BIBI",
+//    "박지성": "Charlie Puth",
+//    "원강묵": "YE",
+//    "박성훈": "IU"
+//]
+//let AnotherTeamDict: [String: String] = [
+//    "안효명": "Imagine Dragons",
+//    "방유빈": "AESPA",
+//    "박재형": "New Jeans",
+//    "안지영": "IVE",
+//    "김성준": "LESSERAFIM"
+//]
+////let KeepingCombinedTeamDict: [String: String] = OurTeamDict.merging(AnotherTeamDict) {
+////    (current, _) in current
+////}
+//let KeepingCombinedTeamDict: [String: String] = OurTeamDict.merging(AnotherTeamDict, uniquingKeysWith: { (strCurrent, strNew) -&gt; String in
+//    return strCurrent
+//} )
+////let ReplacingCombinedTeamDict: [String: String] = OurTeamDict.merging(AnotherTeamDict) {
+////    (_, new) in new
+////}
+//let ReplacingCombinedTeamDict: [String: String] = OurTeamDict.merging(AnotherTeamDict, uniquingKeysWith: { (strCurrent, strNew) -&gt; String in
+//    return strNew
+//} )
+//var IndexedCombinedTeamDict: [String: String] = [:]
+//var arrArtist: [String] = []
+//
+//for (strMember, strArtist) in ReplacingCombinedTeamDict {
+//    arrArtist.append(strArtist)
+//}
+//
+//for iLoopCount in 0..&lt;arrArtist.count {
+//    let iDictIndex: String = "\(iLoopCount + 1)"
+//    IndexedCombinedTeamDict[iDictIndex] = arrArtist[iLoopCount]
+//}
+//
+//for (strMember, strArtist) in IndexedCombinedTeamDict {
+//    print("\(strMember) into \(strArtist)")
+//}
+// ------------------------------ 5-3
+let OurTeamDict: [[String: String]] = [
+    ["송도희": "Taeyeon"],
+    ["임하니": "Maroon5"],
+    ["윤경환": "BIBI"],
+    ["박지성": "Charlie Puth"],
+    ["원강묵": "YE"],
+    ["박성훈": "IU"]
+]
+let AnotherTeamDict: [[String: String]] = [
+    ["안효명": "Imagine Dragons"],
+    ["방유빈": "AESPA"],
+    ["박재형": "New Jeans"],
+    ["안지영": "IVE"],
+    ["김성준": "LESSERAFIM"]
+]
+var CombinedTeamDict: [[String: String]] = OurTeamDict + AnotherTeamDict
+var iMemberIndex: Int = 0
+
+for iLoopCount in 0..&lt;CombinedTeamDict.count {
+    let iDictIndex: String = "\(iLoopCount + 1)"
+    let TempDict: [String: String] = [iDictIndex: CombinedTeamDict[iLoopCount].first?.value ?? "There is no the String type value" ]
+    CombinedTeamDict[iLoopCount] = TempDict
+}
+
+for eachDict in CombinedTeamDict {
+    for (strMember, strArtist) in eachDict {
+        print("\(strMember) into \(strArtist)")
+    }
+}
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 6104}</string>
+			<key>OriginalContent</key>
+			<string>
+</string>
+			<key>OriginalRange</key>
+			<string>{0, 1}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>

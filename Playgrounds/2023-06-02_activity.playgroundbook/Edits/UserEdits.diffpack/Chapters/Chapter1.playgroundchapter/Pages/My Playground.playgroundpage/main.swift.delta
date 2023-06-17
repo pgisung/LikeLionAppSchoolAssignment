@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// 응당 영웅이라면 가져야할 소양 프로토콜로 선언
+protocol ProtHeroable {
+    // 각 영웅은 다른 사람들이 바꿀 수 없는 고유의 별칭을 갖고있으므로 getter만 추가
+    // ( but, 상속 받은 서브클래스는 Setter 추가 가능 )
+    var m_strNickName: String { get }
+    
+    // 영웅이라면 시민들의 인사를 무시해선 안됨
+    func doGreet() 
+}
+
+// 각 영웅 공통 클래스 선언
+class CHero: ProtHeroable {
+    // 저장 프로퍼티 선언부
+    let m_strNickName: String
+    let m_iHeroIndex: Int
+    
+    init (iHeroIndex: Int, strName: String) {
+        m_strNickName = strName
+        m_iHeroIndex = iHeroIndex
+    }
+    
+    func doGreet() {
+        
+    }
+}
+
+class CIronManTeam: CHero {
+    init (iHeroIndex: Int, strName: String) {
+        super.init(iHeroIndex: m_iHeroIndex, strName: self.m_strNickName)
+    }
+}
+
+class CCaptainTeam: CHero {
+    init (iHeroIndex: Int, strName: String) {
+        super.init(iHeroIndex: m_iHeroIndex, strName: self.m_strNickName)
+    }
+}
+
+//var arrayHero: [CHero]
+//let arrayIronManTeam: [String] = [ "아이언맨", "블랙위도우", "비전", "스파이더맨", "워머신" ]
+//let arrayCaptainTeam: [String] = [ "캡틴 아메리카", "호크아이", "완다", "앤트맨", "팔콘" ]
+//
+//let iTotalHeroCount = arrayIronManTeam.count + arrayCaptainTeam.count
+//for iHeroIndex in 1 ... iTotalHeroCount {
+//    arrayHero.append( arrayIronManTeam[iHeroIndex] )
+//}
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 1204}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{0, 0}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>

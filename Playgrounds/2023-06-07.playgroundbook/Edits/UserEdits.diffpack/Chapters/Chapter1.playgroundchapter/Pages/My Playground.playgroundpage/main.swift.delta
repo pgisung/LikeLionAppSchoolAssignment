@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>//let myAge: Int = 23
+//let yourAge = 25 // 알아서 25의 타입인 Int로 yourAge가 잡히고 할당된다 (타입추론)
+//
+//let ages: [Int] = [12, 13, 15, 11, 23]
+//let heights = [150, 170, 165, 201, 207, 182] // 이렇게 해도 [Int] 타입 만들어짐
+//
+//var weights: Array&lt;Int&gt; = [30, 80, 120, 65, 45]
+//
+//weights.append(123)
+//print(weights)
+//
+//struct 콩콩콩 {
+//    var name = "스카이콩콩"
+//}
+//
+//let 아무거나1 = [ 123, "이러쿵", "저러쿵", 50.12, 콩콩콩() ] as [Any]
+//let 아무거나2: [Any] = [ 123, "이러쿵", "저러쿵", 50.12, 콩콩콩() ]
+//
+//var names: [String] = []
+////var names = [String](repeating: "NAME", count: 5)
+//names.append("Ned")
+//names.append("Tuna")
+//
+//var clients: [String] = [ "McDonald", "BurgerKing" ]
+//
+//let tags: [String] = names + clients
+//
+//for tag in tags {
+//    print("이름: \(tag)")
+//}
+//
+//let myTuple: [(String, Int)] = [("이름1", 1), ("이름2", 2)]
+//
+//for (_, number) in myTuple {
+//    //    print("name: \(name)")
+//    print("number: \(number)")
+//}
+//
+//print("-----------------------------")
+//
+//// Type (String) -&gt; Void
+//func myFunc(_ name: String) {
+//    print("Hello myfunc \(name)")
+//}
+//
+//myFunc("Ned")
+//
+//var myFuncs: [(String) -&gt; Void] = []
+//
+//myFuncs.append(myFunc)
+//myFuncs.append(myFunc)
+//myFuncs.append(myFunc)
+//
+//for yourFunc in myFuncs {
+//    yourFunc("Go!!!!")
+//}
+//
+//// NSOperationQueue
+//// Grand Central Dispatch Queue : GCD
+//
+//print("-----------------------------")
+//
+//// HAS-A 관계를 만들다보면 배열도 많이 활용된다
+//
+//// 학교
+//struct School {
+//    var grades: [Grade] = []
+//}
+//
+//// 학년
+//struct Grade {
+//    var gradeNumber: Int = 1
+//    var gradeClass: [GradeClass] = []
+//}
+//
+//// 학년 안의 반
+//struct GradeClass {
+//    var students: [Student] = []
+//}
+//
+//// 학생
+//struct Student {
+//    var name: String = "홍길동"
+//}
+//
+////-----------------------------
+//
+//func treeInfo(trees: [String]) {
+//    guard !trees.isEmpty else {
+//        print("준비된 나무가 없습니다")
+//        return
+//    }
+//    
+//    guard trees.count &gt; 1 else {
+//        print("한 개의 나무로는 준비가 부족합니다")
+//        return
+//    }
+//    
+//    print("\(trees.count)개의 나무가 준비되어있습니다")
+//}
+//
+//func treePicker(trees: [String], index: Int) {
+//    if index &gt; -1 &amp;&amp; index &lt; trees.count {
+//        print(trees[index])
+//    } else {
+//        print("범위 밖의 나무 선택입니다")
+//    }
+//}
+//
+//treeInfo(trees: [ "Pine", "Oak", "Yew" ])
+//treeInfo(trees: [])
+//treeInfo(trees: [ "Pine" ])
+//
+//treePicker(trees: [ "Pine", "Oak", "Yew" ], index: 0)
+//treePicker(trees: [ "Pine", "Oak", "Yew" ], index: 1)
+//treePicker(trees: [ "Pine", "Oak", "Yew" ], index: 2)
+//treePicker(trees: [ "Pine", "Oak", "Yew" ], index: 3)
+//
+//print("-----------------------------")
+
+//var names: [String] = [ "김강호", "조희진", "박지성", "김찬형", "김성훈", "이재승" ]
+//
+//// shuffled 함수는 원본을 그대로 두고, 새롭게 뒤섞은 배열을 만들어 왼쪽에 할당해주는 용도로 쓴다
+//var nameShuffled = names.shuffled()
+//
+//print(names)
+//print(nameShuffled)
+//
+//// 하지만 귀찮게 따로 배열 또 안만들고 그자체로 변경 해주려면?
+//names = names.shuffled()
+//print(names)
+//
+//// 위와 같이 하면 길어지니까 좀 더 쉬운 거 만들자
+//// 그냥 스스로 뒤섞기만 하고 아무 return 없는 함수!
+//names.shuffle()
+//print(names)
+//
+//let name = names.randomElement() ?? "(뽑을 내용 없음)"
+//print(name)
+
+//print("-----------------------------")
+
+//var trees: [String] = []    
+//
+//trees += [ "소나무", "야자수", "느티나무", "오렌지나무" ]
+//
+//print(trees)
+//
+//trees.append("세계수")
+//trees += ["벚나무"]
+//
+//print(trees)
+//
+//trees.insert("은행나무", at: 2)
+//trees = ["물구나무"] + trees
+//
+//print(trees)
+//
+//trees.remove(at: 0)
+//trees.remove(at: 3)
+//
+//print(trees)
+//
+//while !trees.isEmpty {
+//    print("\(trees.last ?? "(나무없음)") 나무가 베어졌습니다. 싹둑!")
+//    trees.removeLast()
+//}
+
+//print("-----------------------------")
+
+//var bookDict: [String:String] = [
+//    "101-1023": "서부전선 이상없다",
+//    "102-3023": "Swift 한방에 정리"]
+//
+///*
+// 이렇게 딕셔너리 만들면 키가 겹치면 사고난다
+// var students: [String:String] = [
+// "김강호": "멋진 개발자가 될거에요",
+// "조희진": "멋진 앱을 만들거에요",
+// "이승준": "저는 여기서 성공한 첫번째 개발자 될겁니다",
+// "이승준": "저도 성공할거에요"]
+// */
+//
+///*
+// 해결책1: 딕셔너리들의 배열로 재구성
+// */
+//
+//var students: [[String: String]] = [
+//    [
+//        "name": "이승준",
+//        "message": "저는 여기서 성공한 첫번째 개발자 될겁니다"
+//    ],
+//    [
+//        "name": "이승준",
+//        "message": "저도 성공할거에요"
+//    ]
+//]
+//
+///*
+// 해결책2: 객체를 만들어 배열에 담는다
+// */
+//
+//struct Student {
+//    var name: String
+//    var message: String
+//    
+//    init(name: String, message: String) {
+//        self.name = name
+//        self.message = message
+//    }
+//}
+//
+//var students2: [Student] = [
+//    Student(name: "이승준", message: "저는 여기서 성공한 첫번째 개발자 될겁니다"),
+//    Student(name: "이승준", message: "저도 성공할거에요"),
+//] 
+
+//print("-----------------------------")
+
+var students: [String: String] = [
+    "202300001": "홍길동",
+    "202300008": "고길동",
+    "202300012": "둘리"
+]
+
+print(students.count)
+
+print(students["202300008"] ?? "(없음)")
+
+print(students["202300009", default: "(진짜없음)"])
+
+students["202300012"] = "마이콜"
+
+print(students.count)
+print(students)
+
+students["202300032"] = "바요킹"
+
+print(students.count)
+print(students)
+
+students["202300032"] = nil
+
+print(students.count)
+print(students)
+
+for (number, name) in students {
+    print("\(number) : \(name)")
+}
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 5034}</string>
+			<key>OriginalContent</key>
+			<string>
+</string>
+			<key>OriginalRange</key>
+			<string>{0, 1}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>

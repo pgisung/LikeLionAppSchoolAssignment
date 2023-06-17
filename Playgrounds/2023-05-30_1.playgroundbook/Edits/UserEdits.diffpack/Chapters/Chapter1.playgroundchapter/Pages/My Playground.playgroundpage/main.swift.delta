@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>//var strJob: String?
+//var tupleInfo = ( name:"Jisung", job: strJob)
+//
+//func example (_ name:String, _ job:String?) -&gt; Bool {
+//    var bReturn = false
+//    
+//    repeat {
+//        guard var parameterJob = job, parameters.name != "Jisung" else {
+//            print("something wrong")
+//            break
+//        }
+//        
+//        job = "IOS developer"
+//        
+//        bReturn = true
+//    } while false
+//    
+//    return bReturn
+//}
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 454}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{0, 0}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>//--------------------------------
+//var age: Int = 13
+//age = 15
+//print(age)
+//
+//print(Int32.max)
+//print(Int32.min)
+//
+//var someFloat: Float = 3.14
+//var someDouble: Double = 3.14
+//
+//// 타입이 달라서 오류가 난다
+//// 이런 경우 타입변환을 통해 해결한다
+//someFloat = Float(someDouble)
+//
+//var isGood: Bool = true
+//isGood = false
+//
+//// 이런 거 없음
+////isGood = Soso
+//
+//let userName: String = "John"
+//let userAge: Int = 15
+//let userService: Int = 2
+//
+//// 이렇게 쓰면 오류 나기 쉽상
+////let message = userName + "은 지금 군대 다녀오면 " + (userAge + userService) + "살이 될거에요"
+//
+//// 안전하게 문자열 보간법을 쓰자
+//let message = """
+//    \(userName)은 지금 군대 다녀오면
+//    \(userAge + userService)살이 될거에요
+//    """
+//
+//// 문자열 보간법을 출력문에 최대한 권장 
+//print("\(message)")
+//
+//var optionalName: String?
+//let myTuple = (age: 10, pi: 3.14, name: optionalName)
+//print("\(myTuple.0)")
+//print("\(myTuple.1)")
+//print("\(myTuple.2)")
+//
+//let (_, pi, _) = myTuple
+//print("\(pi)")
+//
+//// 이 방법을 권장함
+//print("\(myTuple.age)")
+//print("\(myTuple.pi)")
+//
+//if let name = myTuple.name {
+//    print("\(myTuple.name)")
+//} else {
+//    print("No name")
+//}
+//
+//var someAny: Any = 100.0
+//var myDouble = someAny
+//
+//if myDouble is Double {
+//    print("Type: Double")
+//} else if myDouble is Any {
+//    print("Type: Any")
+//} else {
+//    print("Type: not Any")
+//}
+//
+//var result: Bool?
+//var x: Int = 10
+//var y: Int = 20
+//result = x &lt; y
+//
+//if let myResult = result {
+//    print("YES!! : \(myResult)")
+//}
+</string>
+			<key>ModifiedRange</key>
+			<string>{455, 1449}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{1, 0}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>//////////////// 1
+//func greeting (memberName: String){
+//    print("Welcome to IOS class \(memberName)")
+//}
+
+//////////////// 2
+//let nameOfMembers = [ "Sumin", "Jisung", "Chaeyoung", "Byunggu", "Ara" ]
+//
+//func greeting (memberName: String){
+//    print("Welcome to IOS class \(memberName)")
+//}
+//
+//for member in nameOfMembers {
+//    greeting(memberName: member)
+//}
+
+//////////////// 3
+//let nameOfMembers = [ "Sumin", "Jisung", "Chaeyoung", "Byunggu", "Ara" ]
+//
+//func greeting (memberName: String){
+//    print("Welcome to IOS class \(memberName)")
+//}
+//
+//func greeting (memberIndex: Int){
+//    print("Welcome to IOS class \(nameOfMembers[memberIndex])")
+//}
+//
+//for memIndex in 0 ..&lt; nameOfMembers.count {
+//    greeting(memberIndex: memIndex)
+//}
+
+//////////////// 4
+//let nameOfMembers = [ "Sumin", "Jisung", "Chaeyoung", "Byunggu", "Ara" ]
+//
+//func greeting (memberName: String) -&gt; String {
+//    var strResult = "Welcome to IOS class \(memberName)"
+//    return strResult
+//}
+//
+//func greeting (memberIndex: Int) -&gt; String {
+//    var strResult = "Welcome to IOS class \(nameOfMembers[memberIndex])"
+//    return strResult
+//}
+//
+//for memIndex in 0 ..&lt; nameOfMembers.count {
+//    var strPrint = greeting(memberIndex: memIndex)
+//    print(strPrint)
+//}
+
+//////////////// 5
+//let nameOfMembers = [ "Sumin", "Jisung", "Chaeyoung", "Byunggu", "Ara" ]
+//
+//func greeting (memberName: String) -&gt; String {
+//    var strResult = "Welcome to IOS class \(memberName)"
+//    return strResult
+//}
+//
+//func greeting (memberIndex: Int) -&gt; (result: String, name: String, index: Int) {
+//    var iMemCount = memberIndex + 1
+//    var strMember = nameOfMembers[memberIndex]
+//    var strResult = "Welcome to IOS class \(strMember) as \(iMemCount)"
+//    
+//    return (strResult, strMember, iMemCount)
+//}
+//
+//for memIndex in 0 ..&lt; nameOfMembers.count {
+//    var strPrint = greeting(memberIndex: memIndex)
+//    print(strPrint.result)
+//}
+
+//////////////// 6
+let nameOfMembers = [ "Sumin", "Jisung", "Chaeyoung", "Byunggu", "Ara" ]
+
+func greeting (memberName: String...){
+    for member in memberName {
+        print("Welcome to IOS class \(member)")
+    }
+}
+
+greeting(memberName: nameOfMembers[0], nameOfMembers[1], nameOfMembers[2], nameOfMembers[3], nameOfMembers[4])
+
+//////////////// 0000
+//let nameOfMembers = [ "Sumin", "Jisung", "Chaeyoung", "Byunggu", "Ara" ]
+//var memberIndex: Int = 0
+//
+//func greeting (memberName: String, memberCount: Int? = nil) -&gt; (result: String, name: String, memberOrder: Int? = nil) {
+//    var strMember: String = ""
+//    var iCount: Int
+//    var strReturn: String = "Welcome to IOS class "
+//    if let count = memberCount, count &lt; nameOfMembers.count {
+//        iCount = count
+//        strMember = nameOfMembers[count]
+//    } else {
+//        strMember = memberName
+//    }
+//    strReturn += strMember
+//    return (strReturn, strMember, iCount)
+//}
+//
+//for member in nameOfMembers {
+////    var strPrint = greeting(memberName: member)
+//    var strPrint = greeting(memberName: member, memberCount: memberIndex)
+//    print("\(strPrint.result)")
+//    memberIndex += 1
+//}
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 3132}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{0, 0}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>

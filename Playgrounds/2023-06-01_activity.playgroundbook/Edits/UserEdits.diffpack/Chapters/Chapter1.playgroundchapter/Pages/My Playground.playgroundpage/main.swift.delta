@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// Device로써 반드시 구현되어야 합니다.
+protocol Device {
+    var name: String { get }
+    var color: String { get set }
+    func buildMemoText() -&gt; String
+}
+
+class MyComputer: Device {
+    // 저장 프로퍼티 구역
+    var kind: String = "NoBrand"
+    var dateOfPurchase: String = "2023-06-01"
+    var price: Int = 2000000
+    
+    // 이름 관련 저장 및 연산프로퍼티입니다.
+    var nameDetail: String = "Unknown"
+    var name: String {
+        get {
+            return nameDetail
+        }
+        set {
+            nameDetail = newValue
+        }
+    }
+    
+    // 색상 관련 저장 및 연산프로퍼티입니다.
+    var colorDetail: String = "Default Color"
+    var color: String { 
+        get {
+            return colorDetail
+        }
+        set {
+            colorDetail = newValue
+        }
+    }
+    
+    // 생성자 ( 이 클래스의 인스턴스가 생성될 때 최초 진입 함수 )
+    init(kind: String){
+        self.kind = kind
+    }
+    
+    // 인스턴스 메소드
+    func displayComputer() -&gt; String {
+        // 문제1에 적힌대로 객체의 모든 정보 출력
+        return "kind: \(kind), dateOfPurchase: \(dateOfPurchase), price: \(price), memoText: \(buildMemoText())"
+    }
+    
+    // 인스턴스 메소드
+    func buildMemoText() -&gt; String {
+        "name: \(name), color: \(color)"
+    }
+}
+
+// 문제1에서 MyComputer class의 초기화를 할 때 kind라는 매개변수명과 "MacBook"라는 인자를 언급함
+// MyComputer class 안에는 최소 kind라는 이름의 매개변수를 가진 init함수가 필요
+var myMac: MyComputer = MyComputer(kind: "MacBook")
+// MyComputer class 안에 정의되어있지 않은 dateOfPurchase, price 프로퍼티를 추가해야함
+myMac.dateOfPurchase = "2022-04-01"
+myMac.price = 100
+print("information: \(myMac.displayComputer())")
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 1512}</string>
+			<key>OriginalContent</key>
+			<string>
+</string>
+			<key>OriginalRange</key>
+			<string>{0, 1}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>

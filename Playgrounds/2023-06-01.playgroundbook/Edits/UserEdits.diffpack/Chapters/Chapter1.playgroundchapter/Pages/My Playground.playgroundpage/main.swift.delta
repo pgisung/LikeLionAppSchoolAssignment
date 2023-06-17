@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>//class Car {
+//    // 명사 - 프로퍼티
+//    var engine: String = "V8"
+//    var brand: String
+//    var fuelEfficiency: Double = 100.0
+//    let color: String = "orange"
+//    let suspension: String = "끝내주는회사의서스펜션"
+//    let isOpenCar: Bool = false
+//    var gear: Int = 0
+//    
+//    // 이 함수의 타입은 () -&gt; Void
+//    init() {
+//        self.brand = "멋사"
+//    }
+//    
+//    // 이 함수의 타입은 (String) -&gt; Void
+//    init(brand: String) {
+//        self.brand = brand
+//    }
+//    
+//    deinit {
+//        print("\(brand) 폐차!")
+//    }
+//    
+//    class func isOnSale() -&gt; Bool {
+//        return true
+//    }
+//    
+//    // 동사 - 메서드
+//    func handle(isLeft: Bool){
+//        // 핸들을 좌우로 꺾어라
+//    }
+//    
+//    func go() {
+//        // 간다
+//    }
+//    
+//    func stop() {
+//        // 멈춰라
+//    }
+//    
+//    func goBack() {
+//        // 후진해라
+//    }
+//    
+//    func park() {
+//        // 주차해라
+//    }
+//    
+//    func setGear(gear: Int){
+//        // 기어 몇단으로 조정해라
+//        self.gear = gear
+//    }
+//}
+//
+//if Car.isOnSale() {
+//    let myCar: Car = Car()
+//    print("브랜드: \(myCar.brand)")
+//    
+//    myCar.setGear(gear: 1)
+//    print("기어: \(myCar.gear)단")
+//    
+//    let yourCar: Car = Car(brand: "타임코스모스")
+//    print("yourCar 브랜드: \(yourCar.brand)")
+//    
+//    let myUncleCar: Car = yourCar
+//    // class로 만든 것은 이름표만 myUncleCar와 yourCar로 다를 뿐, 실제 메모리 공간의 위치는 동일하다
+//    // 그러니까 한 대로 삼촌과 친구가 싸우게 된다
+//    // call-by-reference
+//    // (대비되는 개념은 call-by-value)
+//    myUncleCar.setGear(gear: 3)
+//    print("myUncleCar 기어: \(myUncleCar.gear)")
+//    
+//    print("yourCar 기어: \(yourCar.gear)")
+//    
+//} else {
+//    print("내 차는 세상 어디에도 없어 ㅠㅠ")
+//}
+//
+//-------------------------------------------------
+
+//class Car {
+//    var brand: String = "Tesla" 
+//    var name: String = "(none)"
+//    
+//    init (){
+//        name = "Model 3"
+//    }
+//    
+//    init(name: String){
+//        print("self.name: \(self.name)")
+//        print("name: \(name)")
+//        
+//        self.name = name
+//    }
+//    
+//    var fullname: String {
+//        get {
+//            return "\(self.brand) \(self.name)"
+//        }
+//    }
+//    
+//    var modelName: String {
+//        "\(self.brand) \(self.name)"
+//    }
+//}
+//
+//let myCar: Car = Car()
+//let myCarName: String = myCar.name
+//print("myCar name: \(myCarName)")
+//
+//let yourCar: Car = Car(name: "Model X")
+//print("yourCar name: \(yourCar.name)")
+//
+//print("yourCar fullname: \(yourCar.fullname)")
+//print("yourCar modelName: \(yourCar.modelName)")
+
+//-------------------------------------------------
+// class 상속 예제
+//class Car {
+//    var name: String
+//    
+//    init(name: String){
+//        self.name = name
+//    }
+//}
+//
+//class ElectricCar: Car {
+//    var batteryRate: Double = 0.0
+//}
+//
+//class ElectricSuperCar: ElectricCar {
+//    var boostRate: Double = 0.0
+//}
+//
+//let myTesla: ElectricCar = ElectricCar(name: "Model X")
+//print("myTesla name: \(myTesla.name)")
+//
+//let yourIonic: ElectricCar = ElectricCar(name: "Kona")
+//print("yourIonic name: \(yourIonic.name)")
+//
+//let mySuperCar: ElectricSuperCar = ElectricSuperCar(name: "Nexo")
+//print("mySuperCar name: \(mySuperCar.name)")
+
+//-------------------------------------------------
+// 프로토콜 지향 예제
+
+// 말을 한다는 존재라면 적어도 이런거는 해줘야...
+// 프로토콜은 곧 "요구사항"과 같다
+// 프로토콜 안의 프로퍼티는 연산프로퍼티나 가능하지, 값을 지정하는 코드는 포함 못함
+protocol Talkable {
+    // topic은 값을 외부에 알려줄 수도 있고(get), 
+    // 새롭게 지정할당할 수도 있다(set)
+    var topic: String { get set }
+    func talk()
+}
+
+// Talkable 프로토콜을 따라서 작동하는 struct인 Person이라고 하면
+// Talkable 프로토콜에서 요구하는 talk() 함수를 내부에 구현해주겠다
+struct Person: Talkable {
+    var name: String = "고길동"
+    var topic: String = "코딩교육"
+    
+    func talk() {
+        print("\(name)님께서 \(topic)을 이야기하십니다")
+    }
+}
+
+struct Dolphin: Talkable {
+    var topic: String = "상어를 피하는 법"
+    func talk() {
+        print("돌고래들은 오늘도 \(topic)을 주제로 이야기 나누는 중")
+    }
+}
+
+struct Groot: Talkable {
+    var _topic: String = "I'm Groot."
+    var topic: String {
+        get {
+            return _topic
+        }
+        set {
+            _topic = newValue
+            print("revived topic: \(_topic)")
+        }
+    }
+
+    func talk() {
+        print("I'm Groot. \(topic)")
+    }
+}
+
+let gildong: Person = Person()
+gildong.talk()
+
+let dolphin: Dolphin = Dolphin()
+dolphin.talk()
+
+var groot: Groot = Groot()
+groot.topic = "Marvel"
+groot.talk()
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 4341}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{0, 0}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>

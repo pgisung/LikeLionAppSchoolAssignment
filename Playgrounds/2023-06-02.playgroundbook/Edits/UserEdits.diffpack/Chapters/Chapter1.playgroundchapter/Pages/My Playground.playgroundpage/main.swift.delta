@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>//// 생략된 게 많은 클로저 표현식의 클로저를 sayHello에 할당한다
+//let sayHello = { print("Hello") }
+//sayHello()
+//
+//// 유닉스 표현법? Swift언어는 function signature 옆에 위쪽 중괄호를 붙이는 것을 선호
+//// 클로저 때문
+//// 우리가 알고있던 함수 형태의 클로저를 sayHi라는 이름으로 선언한다
+//func sayHi() {
+//    print("Hi")
+//}
+//
+//sayHi()
+//
+//var talk: () -&gt; Void = sayHello
+//talk()
+//talk = sayHi
+//talk()
+//
+//// ---------------------------------------
+//let multiply = { (_ value1: Int, _ value2: Int) -&gt; Int in
+//    return value1 * value2
+//}
+//
+//func gob(_ value1: Int, _ value2: Int) -&gt; Int {
+//    return value1 * value2
+//}
+//
+//var result = multiply(10, 20)
+//print("result: \(result)")
+//result = gob(10, 20)
+//print("result: \(result)")
+//
+//var calcFunc: (Int, Int) -&gt; Int = multiply
+//print("calcFunc: \(calcFunc(12, 13))")
+//calcFunc = gob
+//print("calcFunc: \(calcFunc(12, 13))")
+//
+//// ---------------------------------------
+//
+//func talkWithMe(yourname: String, completion: () -&gt; Void ) {
+//    print("Hello \(yourname)")
+//    completion()
+//}
+//
+//talkWithMe(yourname: "홍길동", completion: { 
+//    print("반갑습니다")
+//} )
+//
+//// 끝에서 요구되는 매개변수가 클로저이면 이렇게도 쓸 수 있다 Tailing
+//talkWithMe(yourname: "고길동") { 
+//    print("반갑습니다")
+//}
+//
+//talkWithMe(yourname: "둘리", completion: sayHello)
+//talkWithMe(yourname: "또치", completion: sayHi)
+//
+//// ---------------------------------------
+//
+//func calcTwoNumbers (
+//    _ value1: Int,
+//    _ value2: Int,
+//    calculator: (Int, Int) -&gt; Int ) -&gt; Int {
+//    
+//    print("\(value1), \(value2) 두 숫자로 계산을 원하시는군요")
+//    return calculator(value1, value2)
+//}
+//
+//var resultNumber: Int = calcTwoNumbers(10, 15) { (a: Int, b: Int) -&gt; Int in
+//    return a * b
+//}
+//print("result number: \(resultNumber)")
+//
+//resultNumber = calcTwoNumbers(12, 25) { (a: Int, b: Int) -&gt; Int in
+//    return a &gt; b ? a : b
+//}
+//print("result number: \(resultNumber)")
+//
+//let minus: (Int, Int) -&gt; Int = { (a: Int, b: Int) -&gt; Int in
+//    return a - b
+//}
+//resultNumber = calcTwoNumbers(32, 24, calculator: minus)
+//
+//func square(a: Int, b: Int) -&gt; Int {
+//    var result: Int = 1
+//    for _ in 1...b {
+//        result = result * a
+//    }
+//    return result
+//}
+//resultNumber = calcTwoNumbers(12, 2, calculator: square)
+//print("result number: \(resultNumber)")
+//
+//// ---------------------------------------
+//
+//// functionA 함수
+//// 매개변수 : 없음
+//// 반환 결과 : () -&gt; Int 타입의 함수
+////var counter: Int = 0
+//func functionA () -&gt; () -&gt; Int {
+//    var counter: Int = 0
+//    
+//    func functionB() -&gt; Int {
+//        return counter + 10
+//        //        counter += 10
+//        //        return counter
+//    }
+//    
+//    return functionB
+//}
+//
+//let myClosure: () -&gt; Int = functionA()
+//var result_2 = myClosure()
+//print("result: \(result_2)")
+//
+//for _ in 0 ..&lt; 10 {
+//    result_2 = myClosure()
+//    print("result: \(result_2)")
+//}
+//
+//// ---------------------------------------
+//class Person {
+//    var age: Int = 0
+//    
+//    func printAge() {
+//        print("[Person] age: \(age)")
+//    }
+//}
+//
+//class Student: Person {
+//    // 프로퍼티는 오버라이드로 재정의할 수 없다
+//    // var age: Double = 0.0 ... 안됨
+//    
+//    override func printAge() {
+//        super.printAge()
+//        print("[Student] welcome, student's age is \(age)")
+//    }
+//}
+//
+//class MSStudent:Student {
+//    override func printAge() {
+//        super.printAge()
+//        print("[MSStudent] hello, our middle school student!")
+//    }
+//    
+//}
+//
+//print("----------------------")
+//let myPerson: Person = Person()
+//myPerson.age = 25
+//myPerson.printAge()
+//
+//print("----------------------")
+//let myStudent: Student = Student()
+//myStudent.age = 12
+//myStudent.printAge()
+//
+//print("----------------------")  
+//let myMSStudent: MSStudent = MSStudent()
+//myMSStudent.age = 13
+//myMSStudent.printAge()
+//
+//// ---------------------------------------
+//import SwiftUI
+//import UIKit
+//
+//extension Color {
+//    var appSchoolColor: Color {
+//        return Color.orange
+//    }
+//}
+//
+//var myColor: Color = Color.gray
+//
+//myColor = Color.appSchoolColor
+//// ---------------------------------------
+//protocol Talkable {
+//    func sayHello()
+//}
+//
+//protocol Runnable {
+//    func runaway()
+//}
+//
+//class Person: Talkable {
+//    var name: String
+//    
+//    init(name: String){
+//        self.name = name
+//    }
+//    
+//    func sayHello() {
+//        print("Hello, \(name)")
+//    }
+//}
+//
+//class Student: Person, Runnable {
+//    var studentClass: Int
+//    
+//    init(name: String, studentClass: Int) {
+//        self.studentClass = studentClass
+//        super.init(name: name)
+//    }
+//    
+//    override func sayHello() {
+//        print("Hi, \(name)")
+//    }
+//    
+//    func runaway() {
+//        print("Run!")
+//    }
+//}
+//
+//let john: Person = Person(name: "John")
+//john.sayHello()
+//
+//let anna: Student = Student(name: "John", studentClass: 4)
+//anna.sayHello()
+//// ---------------------------------------
+//extension Double {
+//    var squarded: Double {
+//        get {
+//            return self * self   
+//        }
+//    }
+//    
+//    var cubed: Double {
+//        self * self * self
+//    }
+//}
+//
+//let myNumber: Double = 3.0
+//var result = myNumber * myNumber
+//result = myNumber.squarded
+//result = myNumber.cubed
+//print("result: \(result)")
+//
+//// Double의 literal에도 직접 extension된 연산 프로퍼티 활용가능
+//print("한 변의 길이가 4.0인 정사각형 면적: \(4.0.squarded)")
+//print("한 변의 길이가 5.0인 정육면체 부피: \(5.0.cubed)")
+//// ---------------------------------------
+//class Person {
+//    var name: String = ""
+//    
+//    func selfIntroduce() {
+//        print("저는 \(name)입니다")
+//    }
+//    
+//    // Person을 상속받은 어떤 서브클래스도 이 메서드를 오버라이드 할 수 없다
+//    final func sayHello() {
+//        print("Hello")
+//    }
+//    
+//    // 타입의 인스턴스를 만들지 않고도 호출가능하지만 재정의 안되는 메서드
+//    static func typeMethod() {
+//        print("이것은 타입 메서드입니다")
+//    }
+//    
+//    // 타입의 인스턴스를 만들지 않고도 호출가능한 클래스 메서드
+//    class func classMethod() {
+//        // print("저는 \(name)입니다")
+//        print("이것은 클래스 메서드입니다")
+//    }
+//    
+//    final class func finalClassMethod() {
+//        print("이것은 재정의 불가능한클래스 메서드입니다")
+//    }
+//}
+//
+//class Student: Person {
+//    var major: String = ""
+//    
+//    override func selfIntroduce() {
+//        super.selfIntroduce()
+//        print("전공은 \(major)입니다")
+//    }
+//}
+//
+//let ned: Person = Person()
+//let tuna: Student = Student()
+//
+//ned.name = "ned"
+//tuna.name = "tuna"
+//tuna.major = "Swift"
+//
+//ned.selfIntroduce()
+//tuna.selfIntroduce()
+//
+//// ned.classMethod() ... 이런거 안됨!
+//Person.classMethod() // 이런거만 됨. 그것이 클래스 메서드니까.
+//// ned.typeMethod() ... 이것도 안됨!
+//Person.typeMethod() // 이런건 또 됨. 클래스 메서드친구 타입 메서드니까
+//
+//Person.finalClassMethod()
+//
+//Student.classMethod()
+//Student.typeMethod()
+//Student.finalClassMethod()
+//// ---------------------------------------
+extension String {
+    init(number: Int) {
+        self = "number: \(number)"
+    }
+}
+
+let myName: String = "Ned"
+
+let yourName: String = String(number: 10)
+print("yourName: \(yourName)")
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 6952}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{0, 0}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>

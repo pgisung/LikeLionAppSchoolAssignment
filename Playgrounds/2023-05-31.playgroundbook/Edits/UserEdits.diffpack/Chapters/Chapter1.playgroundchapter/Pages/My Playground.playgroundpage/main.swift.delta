@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>//
+//func buildMessageFor(_ name:String = "Customer", count:Int) -&gt; String {
+//    return "a"
+//}
+//
+//
+//func buildMessageFor(count:Int) -&gt; String {
+//    return "b"
+//}
+//
+//
+//func buildMessageFor(_ name:String = "Customer", _ percent:Double = 1.1, count:Int) -&gt; String {
+//    return "c"
+//}
+//
+//
+//func buildMessageFor(_ percent:Double = 0.9, count:Int) -&gt; String {
+//    return "d"
+//}
+//
+//
+//var strTemp = buildMessageFor(count: 1)
+//print("\(strTemp)")
+
+
+//--------------------
+
+//// 이 함수의 타입 : () -&gt; Void
+//func sayHello() {
+//    print("안녕하세요")
+//}
+//
+//// 이 함수의 타입 : (String) -&gt; Void
+//func sayHello(name: String) {
+//    print("안녕하세요, \(name)님")
+//}
+//
+//// 지역 매개변수 name은 있지만, 외부 매개변수는 이름 생략
+//func sayHelloWithName(_ name: String) {
+//    print("어서옵쇼, \(name)님")
+//}
+//
+//// 이 함수의 타입 : (String) -&gt; String
+//// 시그니처 : buildHelloWithName(_ name: String) -&gt; String
+//func buildHelloWithName(_ name: String) -&gt; String {
+//    return "어서옵쇼, \(name)님"
+//    print("완료") // 여기 실행 안됨
+//}
+//
+//sayHello()
+//sayHello(name: "홍길동")
+//sayHelloWithName("고길동")
+//
+//let message: String = buildHelloWithName("둘리")
+//print("message: \(message)")
+
+//-------------------
+
+//func sayHello(name: String = "둘리") {
+//    print("환영합니다, \(name)님")
+//}
+//
+//func sayHi(username name: String = "도우너") {
+//    print("잘만났다, \(name)님")
+//}
+//
+//func sayHelloWithName(_ name: String = "또치") {
+//    print("어서옵쇼, \(name)님")
+//}
+//
+//sayHello(name: "고길동")
+//sayHelloWithName("희동이")
+//
+//sayHello()
+//sayHelloWithName()
+//
+//sayHi(username: "마이콜")
+//sayHi()
+//
+///*
+// 결과
+// ---
+// 환영합니다, 고길동님
+// 어서옵쇼, 희동이님
+// 환영합니다, 둘리님
+// 어서옵쇼, 또치님
+// 잘만났다, 마이콜님
+// 잘만났다, 도우너님
+// */
+//
+////-------------
+//// 타입: (Int) -&gt; String
+//func buildMessageFor(count: Int) -&gt; String {
+//    return "가나다"
+//}  
+//
+//// 타입: (String, Int) -&gt; String
+//func buildMessageFor(_ name: String = "Customer", count: Int) -&gt; String {
+//    return "ABC"
+//}
+//
+//// 명시적으로 일치하는 타입의 함수 호출을 우선한다
+//// 그 다음으로 생략된 내용이 있는 경우를 호출한다
+//let message: String = buildMessageFor(count: 10) 
+//print("\(message)") // 가나다
+
+//-----------------
+
+//func doubleValue(_ value: Int) -&gt; Int {
+//    var value = value // shadow copy로 변수 만들기
+//    value += value
+//    return value
+//}
+//
+//var myValue: Int = 10
+//let result: Int = doubleValue(myValue)
+//
+//print("처음엔 \(myValue)") // 10
+//print("받은 값 \(result)") // 20
+//print("그래도 지금역시 \(myValue)") // 10
+//
+//// 억지로 바꿔주는 수 밖에...
+//myValue = result
+//print("가져온 값으로 바꾸면 \(myValue)") // 20
+
+//-------------------
+
+// 타입은 (Float) -&gt; Float
+//func inchesToFeet(_ inches: Float) -&gt; Float {
+//    return inches * 0.833333
+//}
+//
+//// 여기도 타입은 (Float) -&gt; Float
+//func inchesToFeetMore(_ inches: Float) -&gt; Float {
+//    return inches * 0.833333 * 2
+//}
+//
+//func say5inches(myFunc: (Float) -&gt; (Float)){
+//    let inches = myFunc(100)
+//    print("OK It's \(inches)")
+//}
+//
+//var toFeet: (Float) -&gt; Float = inchesToFeet
+//var result = toFeet(10)
+//print("result: \(result)")
+//
+//toFeet = inchesToFeetMore
+//result = toFeet(10)
+//print("result: \(result)")
+//
+//say5inches(myFunc: toFeet)
+//
+
+//-------------------
+
+// 타입 이름이 BankAccount
+class BankAccount {
+    var accountBalance: Float // 잔고
+    var accountNumber: Int = 0
+    let fees: Float = 25.00 // 수수료
+    
+    // 연산 프로퍼티 - 그 때 그 때 결과가 달라요
+    var balanceLessFees: Float {
+        set {
+            
+        }
+        get {
+            return accountBalance - fees
+        }
+    }
+    
+    // 밖에서 BankAccount() 라고 하면 여기가 실행된다
+    init() {
+        accountBalance = 100.00
+        accountNumber = 0
+    }
+    
+    init(number: Int, balance: Float) {
+        accountBalance = balance
+        accountNumber = number
+    }
+    
+    deinit {
+        print("안녕히 계세요 여러분, 저는 제 행복을 찾아 떠납니다")
+    }
+    
+    func setBalanceLessFees() {
+        
+    }
+    
+    func getBalanceLessFees() -&gt; Float {
+        return accountBalance - fees
+    }
+    
+    func displayBalance() {
+        print("Number \(accountNumber)")
+        print("Current balance is \(accountBalance)")
+    }
+    
+    class func getMaxBalance() -&gt; Float {
+        return 100000.00
+    }
+}
+
+// BankAccount()는 init()이라는 내부 메서드의 결과
+// 초기값까지 지정해서 인스턴스를 생성할 수 있다
+
+let fBalance: Float = 400.25
+
+// getMaxBalance()는 class func라서 이렇게 호출 가능
+// BankAccount타입 이름에 점 찍고 바로...
+if fBalance &lt; BankAccount.getMaxBalance() {
+    let myAccount: BankAccount = BankAccount(number: 1231234567, balance: fBalance)
+    
+    // displayBalance()는 그냥 func라서 이렇게 호출해야한다.
+    // myAccount 만들고...
+    myAccount.displayBalance()
+    
+    var balanceLessFees: Float = myAccount.getBalanceLessFees()
+    print("balanceLessFees: \(balanceLessFees)")
+    
+    balanceLessFees = myAccount.balanceLessFees
+    print("balanceLessFees: \(balanceLessFees)")
+    
+} else {
+    let generalAccount: BankAccount = BankAccount(number: 1231234567, balance: fBalance)
+    generalAccount.displayBalance()
+}
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 4837}</string>
+			<key>OriginalContent</key>
+			<string>
+</string>
+			<key>OriginalRange</key>
+			<string>{0, 1}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>
