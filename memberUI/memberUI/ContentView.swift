@@ -17,38 +17,38 @@ struct ContentView: View {
         VStack {
             Text(message)
             
-            List(grades) { grade in
-                Button {
-                    message = doGugudan(grade.grade)
-
-                    let objSpeechUtterance = AVSpeechUtterance(string: message)
-                    objSpeechSynthesizer.speak(objSpeechUtterance)
-                } label: {
-                    HStack {
-                        Text("\(grade.grade)단")
-                            .foregroundColor(.blue)
-                    }
-                }
-            }
-            
-//            List(members) { member in
+//            List(grades) { grade in
 //                Button {
-//                    message = "Hello \(member.strName) #\(member.strNickName)"
+//                    message = doGugudan(grade.grade)
 //
 //                    let objSpeechUtterance = AVSpeechUtterance(string: message)
 //                    objSpeechSynthesizer.speak(objSpeechUtterance)
 //                } label: {
 //                    HStack {
-//                        Image("\(member.imageName)")
-//                            .resizable()
-//                            .frame(width: 50, height: 50)
-//                        Text("\(member.strName)")
-//                        Spacer()
-//                        Text("\(member.strNickName)")
+//                        Text("\(grade.grade)단")
 //                            .foregroundColor(.blue)
 //                    }
 //                }
 //            }
+            
+            List(members) { member in
+                Button {
+                    message = "Hello \(member.strName) #\(member.strNickName)"
+
+                    let objSpeechUtterance = AVSpeechUtterance(string: message)
+                    objSpeechSynthesizer.speak(objSpeechUtterance)
+                } label: {
+                    HStack {
+                        Image("\(member.imageName)")
+                            .resizable()
+                            .frame(width: 50, height: 50)
+                        Text("\(member.strName)")
+                        Spacer()
+                        Text("\(member.strNickName)")
+                            .foregroundColor(.blue)
+                    }
+                }
+            }
         }
         .font(.largeTitle)
         .listStyle(.plain)

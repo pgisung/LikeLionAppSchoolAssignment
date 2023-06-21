@@ -9,186 +9,186 @@ import SwiftUI
 import AVFoundation
 
 // ------------------------ 함께해요 2번 강사님과 ------------------------
-struct ContentView: View {
-    
-    @State var selectedIndex: Int = 0
-    @State var result: String = "(result)"
-    
-    let speechSynth: AVSpeechSynthesizer = AVSpeechSynthesizer()
-    
-    var body: some View {
-        VStack {
-            Text("#Table")
-                .font(.headline)
-                .padding()
-            
-            HStack {
-                Group {
-                    Button {
-                        // action 클로저 담길 영역
-                        updateSelectedIndex(1)
-                    } label: {
-                        // label View 코드가 담길 영역
-                        Text("1")
-                            .font(.largeTitle)
-                    }
-                    
-                    Spacer()
-                }
-                Group {
-                    Button {
-                        // action 클로저 담길 영역
-                        updateSelectedIndex(2)
-                    } label: {
-                        // label View 코드가 담길 영역
-                        Text("2")
-                            .font(.largeTitle)
-                    }
-                    
-                    Spacer()
-                }
-                Group {
-                    Button {
-                        // action 클로저 담길 영역
-                        updateSelectedIndex(3)
-                    } label: {
-                        // label View 코드가 담길 영역
-                        Text("3")
-                            .font(.largeTitle)
-                    }
-                    
-                    Spacer()
-                }
-                Group {
-                    Button {
-                        // action 클로저 담길 영역
-                        updateSelectedIndex(4)
-                    } label: {
-                        // label View 코드가 담길 영역
-                        Text("4")
-                            .font(.largeTitle)
-                    }
-                    
-                    Spacer()
-                }
-                Group {
-                    Button {
-                        // action 클로저 담길 영역
-                        updateSelectedIndex(5)
-                    } label: {
-                        // label View 코드가 담길 영역
-                        Text("5")
-                            .font(.largeTitle)
-                    }
-                    
-                    Spacer()
-                }
-                Group {
-                    Button {
-                        // action 클로저 담길 영역
-                        updateSelectedIndex(6)
-                    } label: {
-                        // label View 코드가 담길 영역
-                        Text("6")
-                            .font(.largeTitle)
-                    }
-                    
-                    Spacer()
-                }
-                Group {
-                    Button {
-                        // action 클로저 담길 영역
-                        updateSelectedIndex(7)
-                    } label: {
-                        // label View 코드가 담길 영역
-                        Text("7")
-                            .font(.largeTitle)
-                    }
-                    
-                    Spacer()
-                }
-                Group {
-                    Button {
-                        // action 클로저 담길 영역
-                        updateSelectedIndex(8)
-                    } label: {
-                        // label View 코드가 담길 영역
-                        Text("8")
-                            .font(.largeTitle)
-                    }
-                    
-                    Spacer()
-                }
-                Group {
-                    Button {
-                        // action 클로저 담길 영역
-                        updateSelectedIndex(9)
-                    } label: {
-                        // label View 코드가 담길 영역
-                        Text("9")
-                            .font(.largeTitle)
-                    }
-                }
-            }
-            .padding()
-            
-            if selectedIndex > 0 {
-                Text("Table for \(selectedIndex)")
-                    .font(.largeTitle)
-                    .padding()
-                
-                Text("\(result)")
-                    .font(.largeTitle)
-                
-                HStack {
-                    Button {
-                        let message = "\(result)"
-                        
-                        let utterance = AVSpeechUtterance(string: message)
-                        speechSynth.speak(utterance)
-                    } label: {
-                        Text("Say it")
-                            .font(.largeTitle)
-                            .padding()
-                    }
-                    Button {
-                        speechSynth.stopSpeaking(at: .immediate)
-                    } label: {
-                        Text("Stop it")
-                            .font(.largeTitle)
-                            .padding()
-                    }
-                }
-            }
-            
-            Spacer()
-        }
-    }
-    
-    func updateSelectedIndex(_ index: Int) {
-        selectedIndex = index
-        print("\(selectedIndex)")
-        
-        result = """
-                \(selectedIndex) x 1 = \(selectedIndex * 1)
-                \(selectedIndex) x 2 = \(selectedIndex * 2)
-                \(selectedIndex) x 3 = \(selectedIndex * 3)
-                \(selectedIndex) x 4 = \(selectedIndex * 4)
-                \(selectedIndex) x 5 = \(selectedIndex * 5)
-                \(selectedIndex) x 6 = \(selectedIndex * 6)
-                \(selectedIndex) x 7 = \(selectedIndex * 7)
-                \(selectedIndex) x 8 = \(selectedIndex * 8)
-                \(selectedIndex) x 9 = \(selectedIndex * 9)
-                """
-        
-        // 위 방법 말고 for-in 반복문으로 만드는 방법은?
-        result = ""
-        
-        for indexTemp in 1...9 {
-            result = result + "\(selectedIndex) \u{D7} \(indexTemp) = \(selectedIndex * indexTemp)\n"
-        }
-    }
-}
+//struct ContentView: View {
+//
+//    @State var selectedIndex: Int = 0
+//    @State var result: String = "(result)"
+//
+//    let speechSynth: AVSpeechSynthesizer = AVSpeechSynthesizer()
+//
+//    var body: some View {
+//        VStack {
+//            Text("#Table")
+//                .font(.headline)
+//                .padding()
+//
+//            HStack {
+//                Group {
+//                    Button {
+//                        // action 클로저 담길 영역
+//                        updateSelectedIndex(1)
+//                    } label: {
+//                        // label View 코드가 담길 영역
+//                        Text("1")
+//                            .font(.largeTitle)
+//                    }
+//
+//                    Spacer()
+//                }
+//                Group {
+//                    Button {
+//                        // action 클로저 담길 영역
+//                        updateSelectedIndex(2)
+//                    } label: {
+//                        // label View 코드가 담길 영역
+//                        Text("2")
+//                            .font(.largeTitle)
+//                    }
+//
+//                    Spacer()
+//                }
+//                Group {
+//                    Button {
+//                        // action 클로저 담길 영역
+//                        updateSelectedIndex(3)
+//                    } label: {
+//                        // label View 코드가 담길 영역
+//                        Text("3")
+//                            .font(.largeTitle)
+//                    }
+//
+//                    Spacer()
+//                }
+//                Group {
+//                    Button {
+//                        // action 클로저 담길 영역
+//                        updateSelectedIndex(4)
+//                    } label: {
+//                        // label View 코드가 담길 영역
+//                        Text("4")
+//                            .font(.largeTitle)
+//                    }
+//
+//                    Spacer()
+//                }
+//                Group {
+//                    Button {
+//                        // action 클로저 담길 영역
+//                        updateSelectedIndex(5)
+//                    } label: {
+//                        // label View 코드가 담길 영역
+//                        Text("5")
+//                            .font(.largeTitle)
+//                    }
+//
+//                    Spacer()
+//                }
+//                Group {
+//                    Button {
+//                        // action 클로저 담길 영역
+//                        updateSelectedIndex(6)
+//                    } label: {
+//                        // label View 코드가 담길 영역
+//                        Text("6")
+//                            .font(.largeTitle)
+//                    }
+//
+//                    Spacer()
+//                }
+//                Group {
+//                    Button {
+//                        // action 클로저 담길 영역
+//                        updateSelectedIndex(7)
+//                    } label: {
+//                        // label View 코드가 담길 영역
+//                        Text("7")
+//                            .font(.largeTitle)
+//                    }
+//
+//                    Spacer()
+//                }
+//                Group {
+//                    Button {
+//                        // action 클로저 담길 영역
+//                        updateSelectedIndex(8)
+//                    } label: {
+//                        // label View 코드가 담길 영역
+//                        Text("8")
+//                            .font(.largeTitle)
+//                    }
+//
+//                    Spacer()
+//                }
+//                Group {
+//                    Button {
+//                        // action 클로저 담길 영역
+//                        updateSelectedIndex(9)
+//                    } label: {
+//                        // label View 코드가 담길 영역
+//                        Text("9")
+//                            .font(.largeTitle)
+//                    }
+//                }
+//            }
+//            .padding()
+//
+//            if selectedIndex > 0 {
+//                Text("Table for \(selectedIndex)")
+//                    .font(.largeTitle)
+//                    .padding()
+//
+//                Text("\(result)")
+//                    .font(.largeTitle)
+//
+//                HStack {
+//                    Button {
+//                        let message = "\(result)"
+//
+//                        let utterance = AVSpeechUtterance(string: message)
+//                        speechSynth.speak(utterance)
+//                    } label: {
+//                        Text("Say it")
+//                            .font(.largeTitle)
+//                            .padding()
+//                    }
+//                    Button {
+//                        speechSynth.stopSpeaking(at: .immediate)
+//                    } label: {
+//                        Text("Stop it")
+//                            .font(.largeTitle)
+//                            .padding()
+//                    }
+//                }
+//            }
+//
+//            Spacer()
+//        }
+//    }
+//
+//    func updateSelectedIndex(_ index: Int) {
+//        selectedIndex = index
+//        print("\(selectedIndex)")
+//
+//        result = """
+//                \(selectedIndex) x 1 = \(selectedIndex * 1)
+//                \(selectedIndex) x 2 = \(selectedIndex * 2)
+//                \(selectedIndex) x 3 = \(selectedIndex * 3)
+//                \(selectedIndex) x 4 = \(selectedIndex * 4)
+//                \(selectedIndex) x 5 = \(selectedIndex * 5)
+//                \(selectedIndex) x 6 = \(selectedIndex * 6)
+//                \(selectedIndex) x 7 = \(selectedIndex * 7)
+//                \(selectedIndex) x 8 = \(selectedIndex * 8)
+//                \(selectedIndex) x 9 = \(selectedIndex * 9)
+//                """
+//
+//        // 위 방법 말고 for-in 반복문으로 만드는 방법은?
+//        result = ""
+//
+//        for indexTemp in 1...9 {
+//            result = result + "\(selectedIndex) \u{D7} \(indexTemp) = \(selectedIndex * indexTemp)\n"
+//        }
+//    }
+//}
 
 
 // ------------------------ 함께해요 1번 강사님과 ------------------------
@@ -524,109 +524,109 @@ struct ContentView: View {
 //}
 
 // ------------------------ 함께해요 1번 ------------------------
-//struct ContentView: View {
-//    let speechSynth: AVSpeechSynthesizer = AVSpeechSynthesizer()
-//    @State var m_strGreetingMessage: String = "GreetingMessage"
-//    let m_objDictionary: [String: String] = [
-//        "원강묵": "무커",
-//        "박지성": "조니",
-//        "정석호": "덤보",
-//        "박정선": "개발마스터",
-//        "김건섭": "건빵",
-//        "안효명": "ahn",
-//        "한아리": "아리랑",
-//        "박재민": "재민빡"
-//    ]
-//
-//    var body: some View {
-//        VStack {
-//            Spacer()
-//            Text(m_strGreetingMessage)
-//            Spacer()
-//            HStack {
-//                Spacer()
-//                Button(action: {
-//                    m_strGreetingMessage = "안녕하세요 원강묵님! 별명은 \(m_objDictionary["원강묵"] ?? "이름없음")입니다."
-//                    speaking()
-//                }, label:{
-//                    Text("원강묵")
-//                })
-//                Spacer()
-//                Button(action: {
-//                    m_strGreetingMessage = "안녕하세요 박지성님! 별명은 \(m_objDictionary["박지성"] ?? "이름없음")입니다."
-//                    speaking()
-//                }, label:{
-//                    Text("박지성")
-//                })
-//                Spacer()
-//                Button(action: {
-//                    m_strGreetingMessage = "안녕하세요 정석호님! 별명은 \(m_objDictionary["정석호"] ?? "이름없음")입니다."
-//                    speaking()
-//                }, label:{
-//                    Text("정석호")
-//                })
-//                Spacer()
-//            }
-//            Spacer()
-//            HStack {
-//                Spacer()
-//                Button(action: {
-//                    m_strGreetingMessage = "안녕하세요 박정선님! 별명은 \(m_objDictionary["박정선"] ?? "이름없음")입니다."
-//                    speaking()
-//                }, label:{
-//                    Text("박정선")
-//                })
-//                Spacer()
-//                Button(action: {
-//
-//                }, label:{
-//                    Text("Empty")
-//                })
-//                .hidden()
-//                Spacer()
-//                Button(action: {
-//                    m_strGreetingMessage = "안녕하세요 김건섭님! 별명은 \(m_objDictionary["김건섭"] ?? "이름없음")입니다."
-//                    speaking()
-//                }, label:{
-//                    Text("김건섭")
-//                })
-//                Spacer()
-//            }
-//            Spacer()
-//            HStack {
-//                Spacer()
-//                Button(action: {
-//                    m_strGreetingMessage = "안녕하세요 안효명님! 별명은 \(m_objDictionary["안효명"] ?? "이름없음")입니다."
-//                    speaking()
-//                }, label:{
-//                    Text("안효명")
-//                })
-//                Spacer()
-//                Button(action: {
-//                    m_strGreetingMessage = "안녕하세요 한아리님! 별명은 \(m_objDictionary["한아리"] ?? "이름없음")입니다."
-//                    speaking()
-//                }, label:{
-//                    Text("한아리")
-//                })
-//                Spacer()
-//                Button(action: {
-//                    m_strGreetingMessage = "안녕하세요 박재민님! 별명은 \(m_objDictionary["박재민"] ?? "이름없음")입니다."
-//                    speaking()
-//                }, label:{
-//                    Text("박재민")
-//                })
-//                Spacer()
-//            }
-//            Spacer()
-//        }
-//        .padding()
-//    }
-//
-//    func speaking() {
-//        let objSpeechUtterance = AVSpeechUtterance(string: m_strGreetingMessage)
-//        speechSynth.speak(objSpeechUtterance)
-//    }
-//}
+struct ContentView: View {
+    let speechSynth: AVSpeechSynthesizer = AVSpeechSynthesizer()
+    @State var m_strGreetingMessage: String = "GreetingMessage"
+    let m_objDictionary: [String: String] = [
+        "원강묵": "무커",
+        "박지성": "조니",
+        "정석호": "덤보",
+        "박정선": "개발마스터",
+        "김건섭": "건빵",
+        "안효명": "ahn",
+        "한아리": "아리랑",
+        "박재민": "재민빡"
+    ]
+
+    var body: some View {
+        VStack {
+            Spacer()
+            Text(m_strGreetingMessage)
+            Spacer()
+            HStack {
+                Spacer()
+                Button(action: {
+                    m_strGreetingMessage = "안녕하세요 원강묵님! 별명은 \(m_objDictionary["원강묵"] ?? "이름없음")입니다."
+                    speaking()
+                }, label:{
+                    Text("원강묵")
+                })
+                Spacer()
+                Button(action: {
+                    m_strGreetingMessage = "안녕하세요 박지성님! 별명은 \(m_objDictionary["박지성"] ?? "이름없음")입니다."
+                    speaking()
+                }, label:{
+                    Text("박지성")
+                })
+                Spacer()
+                Button(action: {
+                    m_strGreetingMessage = "안녕하세요 정석호님! 별명은 \(m_objDictionary["정석호"] ?? "이름없음")입니다."
+                    speaking()
+                }, label:{
+                    Text("정석호")
+                })
+                Spacer()
+            }
+            Spacer()
+            HStack {
+                Spacer()
+                Button(action: {
+                    m_strGreetingMessage = "안녕하세요 박정선님! 별명은 \(m_objDictionary["박정선"] ?? "이름없음")입니다."
+                    speaking()
+                }, label:{
+                    Text("박정선")
+                })
+                Spacer()
+                Button(action: {
+
+                }, label:{
+                    Text("Empty")
+                })
+                .hidden()
+                Spacer()
+                Button(action: {
+                    m_strGreetingMessage = "안녕하세요 김건섭님! 별명은 \(m_objDictionary["김건섭"] ?? "이름없음")입니다."
+                    speaking()
+                }, label:{
+                    Text("김건섭")
+                })
+                Spacer()
+            }
+            Spacer()
+            HStack {
+                Spacer()
+                Button(action: {
+                    m_strGreetingMessage = "안녕하세요 안효명님! 별명은 \(m_objDictionary["안효명"] ?? "이름없음")입니다."
+                    speaking()
+                }, label:{
+                    Text("안효명")
+                })
+                Spacer()
+                Button(action: {
+                    m_strGreetingMessage = "안녕하세요 한아리님! 별명은 \(m_objDictionary["한아리"] ?? "이름없음")입니다."
+                    speaking()
+                }, label:{
+                    Text("한아리")
+                })
+                Spacer()
+                Button(action: {
+                    m_strGreetingMessage = "안녕하세요 박재민님! 별명은 \(m_objDictionary["박재민"] ?? "이름없음")입니다."
+                    speaking()
+                }, label:{
+                    Text("박재민")
+                })
+                Spacer()
+            }
+            Spacer()
+        }
+        .padding()
+    }
+
+    func speaking() {
+        let objSpeechUtterance = AVSpeechUtterance(string: m_strGreetingMessage)
+        speechSynth.speak(objSpeechUtterance)
+    }
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

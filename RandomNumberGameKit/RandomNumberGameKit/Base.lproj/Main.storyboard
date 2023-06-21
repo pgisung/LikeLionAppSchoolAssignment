@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RandomNumberGameKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9D-ar-M1G">
+                                <rect key="frame" x="16" y="434" width="115" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" subtitle="1">
+                                    <backgroundConfiguration key="background" image="1.png" imageContentMode="scaleAspectFit"/>
+                                    <color key="baseForegroundColor" red="0.89018785830000002" green="0.66732955760000001" blue="0.40263860219999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.89018785830625557" green="0.66732955760107682" blue="0.40263860219056069" alpha="0.90308779761904767" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="actionNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6oh-4B-hQG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lz1-IE-57G">
+                                <rect key="frame" x="139" y="434" width="115" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" subtitle="2">
+                                    <backgroundConfiguration key="background" image="2.png" imageContentMode="scaleAspectFit"/>
+                                    <color key="baseForegroundColor" red="0.89018785830000002" green="0.66732955760000001" blue="0.40263860219999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.89018785830625557" green="0.66732955760107682" blue="0.40263860219056069" alpha="0.90308779761904767" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="actionNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NAJ-Tn-fIZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aft-f7-a64">
+                                <rect key="frame" x="16" y="517" width="115" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" subtitle="4">
+                                    <backgroundConfiguration key="background" image="4.png" imageContentMode="scaleAspectFit"/>
+                                    <color key="baseForegroundColor" red="0.89018785830000002" green="0.66732955760000001" blue="0.40263860219999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.89018785830625557" green="0.66732955760107682" blue="0.40263860219056069" alpha="0.90308779761904767" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="actionNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XLf-mt-YI6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBa-Kd-MFB">
+                                <rect key="frame" x="139" y="517" width="115" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" subtitle="5">
+                                    <backgroundConfiguration key="background" image="5.png" imageContentMode="scaleAspectFit"/>
+                                    <color key="baseForegroundColor" red="0.89018785830000002" green="0.66732955760000001" blue="0.40263860219999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.89018785830625557" green="0.66732955760107682" blue="0.40263860219056069" alpha="0.90308779761904767" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="actionNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y5A-Oj-LbE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JkH-5Y-Doc">
+                                <rect key="frame" x="16" y="600" width="115" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" subtitle="7">
+                                    <backgroundConfiguration key="background" image="7.png" imageContentMode="scaleAspectFit"/>
+                                    <color key="baseForegroundColor" red="0.89018785830000002" green="0.66732955760000001" blue="0.40263860219999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.89018785830625557" green="0.66732955760107682" blue="0.40263860219056069" alpha="0.90308779761904767" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="actionNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9cp-Yy-TFS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ams-G4-c71">
+                                <rect key="frame" x="139" y="600" width="115" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" subtitle="8">
+                                    <backgroundConfiguration key="background" image="8.png" imageContentMode="scaleAspectFit"/>
+                                    <color key="baseForegroundColor" red="0.89018785830000002" green="0.66732955760000001" blue="0.40263860219999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.89018785830625557" green="0.66732955760107682" blue="0.40263860219056069" alpha="0.90308779761904767" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="actionNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N2z-Xr-xBR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wf-X5-FSs">
+                                <rect key="frame" x="16" y="683" width="115" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Shuffle">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <color key="baseForegroundColor" red="0.43331185567010311" green="0.32483234437483177" blue="0.19599018145626651" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.89018785830625557" green="0.66732955760107682" blue="0.40263860219056069" alpha="0.90308779761904767" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="actionShuffleImages:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ta7-Nh-IjI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYM-xD-g4z">
+                                <rect key="frame" x="139" y="683" width="115" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" subtitle="0">
+                                    <backgroundConfiguration key="background" image="0.png" imageContentMode="scaleAspectFit"/>
+                                    <color key="baseForegroundColor" red="0.89018785830000002" green="0.66732955760000001" blue="0.40263860219999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.89018785830625557" green="0.66732955760107682" blue="0.40263860219056069" alpha="0.90308779761904767" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="actionNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fel-ZN-5gV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhH-G8-Pq8">
+                                <rect key="frame" x="262" y="434" width="115" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" subtitle="3">
+                                    <backgroundConfiguration key="background" image="3.png" imageContentMode="scaleAspectFit"/>
+                                    <color key="baseForegroundColor" red="0.89018785830000002" green="0.66732955760000001" blue="0.40263860219999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.89018785830625557" green="0.66732955760107682" blue="0.40263860219056069" alpha="0.90308779761904767" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="actionNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cbs-nm-tbu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XiM-Le-B1W">
+                                <rect key="frame" x="262" y="517" width="115" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" subtitle="6">
+                                    <backgroundConfiguration key="background" image="6.png" imageContentMode="scaleAspectFit"/>
+                                    <color key="baseForegroundColor" red="0.89018785830000002" green="0.66732955760000001" blue="0.40263860219999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.89018785830625557" green="0.66732955760107682" blue="0.40263860219056069" alpha="0.90308779761904767" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="actionNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UYx-sz-JFk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abk-AH-W7a">
+                                <rect key="frame" x="262" y="600" width="115" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" subtitle="9">
+                                    <backgroundConfiguration key="background" image="9.png" imageContentMode="scaleAspectFit"/>
+                                    <color key="baseForegroundColor" red="0.89018785830000002" green="0.66732955760000001" blue="0.40263860219999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.89018785830625557" green="0.66732955760107682" blue="0.40263860219056069" alpha="0.90308779761904767" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="actionNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3HO-6r-bRj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykm-Er-vtJ">
+                                <rect key="frame" x="262" y="683" width="115" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Reset">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <color key="baseForegroundColor" red="0.43331185567010311" green="0.32483234437483177" blue="0.19599018145626651" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.89018785830625557" green="0.66732955760107682" blue="0.40263860219056069" alpha="0.90308779761904767" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="actionReset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W1c-HK-aRg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose Number Pad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yL7-jq-0fu">
+                                <rect key="frame" x="16" y="357" width="361" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="0.43331185570000003" green="0.32483234439999997" blue="0.1959901815" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n51-Yf-dgs">
+                                <rect key="frame" x="16" y="59" width="361" height="290"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="n51-Yf-dgs" id="WwH-cO-H9R"/>
+                        <outlet property="lblMessage" destination="yL7-jq-0fu" id="oUs-9w-a7T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.824427480916029" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="0.png" width="440" height="640"/>
+        <image name="1.png" width="392" height="640"/>
+        <image name="2.png" width="405" height="640"/>
+        <image name="3.png" width="408" height="640"/>
+        <image name="4.png" width="439" height="640"/>
+        <image name="5.png" width="394" height="640"/>
+        <image name="6.png" width="434" height="640"/>
+        <image name="7.png" width="412" height="640"/>
+        <image name="8.png" width="409" height="640"/>
+        <image name="9.png" width="403" height="640"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
