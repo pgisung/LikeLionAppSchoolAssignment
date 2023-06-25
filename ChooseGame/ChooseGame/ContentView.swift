@@ -170,12 +170,12 @@ struct ContentView: View {
     }
     
     func speech(name:String) {
-//        let utterence = AVSpeechUtterance(string: name)
-//        Voice.speak(utterence)
+        let utterence = AVSpeechUtterance(string: name)
+        Voice.speak(utterence)
     }
     
     
-}//
+}
 
 
 
