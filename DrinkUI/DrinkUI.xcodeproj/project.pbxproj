@@ -1,0 +1,402 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B23390082A52B0C400526376 /* DrinkUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23390072A52B0C400526376 /* DrinkUIApp.swift */; };
+		B233900A2A52B0C400526376 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23390092A52B0C400526376 /* ContentView.swift */; };
+		B233900C2A52B0C600526376 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B233900B2A52B0C600526376 /* Assets.xcassets */; };
+		B233900F2A52B0C600526376 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B233900E2A52B0C600526376 /* Preview Assets.xcassets */; };
+		B23390172A52B0E200526376 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23390162A52B0E200526376 /* Drink.swift */; };
+		B233903B2A52B16300526376 /* Juice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23390342A52B16300526376 /* Juice.swift */; };
+		B233903D2A52B16300526376 /* NonCoffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23390362A52B16300526376 /* NonCoffee.swift */; };
+		B233903E2A52B16300526376 /* Latte.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23390372A52B16300526376 /* Latte.swift */; };
+		B233903F2A52B16300526376 /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23390382A52B16300526376 /* Coffee.swift */; };
+		B23390412A52B16300526376 /* Espresso.swift in Sources */ = {isa = PBXBuildFile; fileRef = B233903A2A52B16300526376 /* Espresso.swift */; };
+		B23390452A52BBBB00526376 /* ColdDrink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23390442A52BBBB00526376 /* ColdDrink.swift */; };
+		B23390472A52BCE900526376 /* ProtocolHotDrink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23390462A52BCE900526376 /* ProtocolHotDrink.swift */; };
+		B23390492A52BFF100526376 /* ExtensionHotDrink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23390482A52BFF100526376 /* ExtensionHotDrink.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B23390042A52B0C400526376 /* DrinkUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B23390072A52B0C400526376 /* DrinkUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkUIApp.swift; sourceTree = "<group>"; };
+		B23390092A52B0C400526376 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B233900B2A52B0C600526376 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B233900E2A52B0C600526376 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B23390162A52B0E200526376 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		B23390342A52B16300526376 /* Juice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Juice.swift; sourceTree = "<group>"; };
+		B23390362A52B16300526376 /* NonCoffee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NonCoffee.swift; sourceTree = "<group>"; };
+		B23390372A52B16300526376 /* Latte.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Latte.swift; sourceTree = "<group>"; };
+		B23390382A52B16300526376 /* Coffee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
+		B233903A2A52B16300526376 /* Espresso.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Espresso.swift; sourceTree = "<group>"; };
+		B23390442A52BBBB00526376 /* ColdDrink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColdDrink.swift; sourceTree = "<group>"; };
+		B23390462A52BCE900526376 /* ProtocolHotDrink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolHotDrink.swift; sourceTree = "<group>"; };
+		B23390482A52BFF100526376 /* ExtensionHotDrink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHotDrink.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B23390012A52B0C400526376 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B2338FFB2A52B0C400526376 = {
+			isa = PBXGroup;
+			children = (
+				B23390062A52B0C400526376 /* DrinkUI */,
+				B23390052A52B0C400526376 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B23390052A52B0C400526376 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B23390042A52B0C400526376 /* DrinkUI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B23390062A52B0C400526376 /* DrinkUI */ = {
+			isa = PBXGroup;
+			children = (
+				B23390072A52B0C400526376 /* DrinkUIApp.swift */,
+				B23390092A52B0C400526376 /* ContentView.swift */,
+				B23390432A52BB7D00526376 /* Extensions */,
+				B23390422A52BB7200526376 /* Protocols */,
+				B23390152A52B0D100526376 /* Models */,
+				B233900B2A52B0C600526376 /* Assets.xcassets */,
+				B233900D2A52B0C600526376 /* Preview Content */,
+			);
+			path = DrinkUI;
+			sourceTree = "<group>";
+		};
+		B233900D2A52B0C600526376 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B233900E2A52B0C600526376 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B23390152A52B0D100526376 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B23390372A52B16300526376 /* Latte.swift */,
+				B233903A2A52B16300526376 /* Espresso.swift */,
+				B23390342A52B16300526376 /* Juice.swift */,
+				B23390362A52B16300526376 /* NonCoffee.swift */,
+				B23390382A52B16300526376 /* Coffee.swift */,
+				B23390162A52B0E200526376 /* Drink.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B23390422A52BB7200526376 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B23390442A52BBBB00526376 /* ColdDrink.swift */,
+				B23390462A52BCE900526376 /* ProtocolHotDrink.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B23390432A52BB7D00526376 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B23390482A52BFF100526376 /* ExtensionHotDrink.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B23390032A52B0C400526376 /* DrinkUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B23390122A52B0C600526376 /* Build configuration list for PBXNativeTarget "DrinkUI" */;
+			buildPhases = (
+				B23390002A52B0C400526376 /* Sources */,
+				B23390012A52B0C400526376 /* Frameworks */,
+				B23390022A52B0C400526376 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DrinkUI;
+			productName = DrinkUI;
+			productReference = B23390042A52B0C400526376 /* DrinkUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B2338FFC2A52B0C400526376 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					B23390032A52B0C400526376 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = B2338FFF2A52B0C400526376 /* Build configuration list for PBXProject "DrinkUI" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B2338FFB2A52B0C400526376;
+			productRefGroup = B23390052A52B0C400526376 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B23390032A52B0C400526376 /* DrinkUI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B23390022A52B0C400526376 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B233900F2A52B0C600526376 /* Preview Assets.xcassets in Resources */,
+				B233900C2A52B0C600526376 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B23390002A52B0C400526376 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B233903E2A52B16300526376 /* Latte.swift in Sources */,
+				B233903B2A52B16300526376 /* Juice.swift in Sources */,
+				B23390492A52BFF100526376 /* ExtensionHotDrink.swift in Sources */,
+				B233900A2A52B0C400526376 /* ContentView.swift in Sources */,
+				B233903F2A52B16300526376 /* Coffee.swift in Sources */,
+				B233903D2A52B16300526376 /* NonCoffee.swift in Sources */,
+				B23390172A52B0E200526376 /* Drink.swift in Sources */,
+				B23390472A52BCE900526376 /* ProtocolHotDrink.swift in Sources */,
+				B23390452A52BBBB00526376 /* ColdDrink.swift in Sources */,
+				B23390082A52B0C400526376 /* DrinkUIApp.swift in Sources */,
+				B23390412A52B16300526376 /* Espresso.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B23390102A52B0C600526376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B23390112A52B0C600526376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B23390132A52B0C600526376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DrinkUI/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.likeLion.please.DrinkUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B23390142A52B0C600526376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DrinkUI/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.likeLion.please.DrinkUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B2338FFF2A52B0C400526376 /* Build configuration list for PBXProject "DrinkUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B23390102A52B0C600526376 /* Debug */,
+				B23390112A52B0C600526376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B23390122A52B0C600526376 /* Build configuration list for PBXNativeTarget "DrinkUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B23390132A52B0C600526376 /* Debug */,
+				B23390142A52B0C600526376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B2338FFC2A52B0C400526376 /* Project object */;
+}
